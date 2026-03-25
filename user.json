@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1773728339411,
+        "name": "Devsanh",
+        "email": "Dev96@gmail.com",
+        "password": "Dev@.24",
+        "role": "user",
+        "createdAt": "2026-03-17T06:18:59.412Z"
+    },
+    {
+        "id": 1773728605069,
+        "name": "Sanju",
+        "email": "Sd428@gmail.com",
+        "password": "S@nju.28",
+        "role": "user",
+        "createdAt": "2026-03-17T06:23:25.069Z"
+    },
+    {
+        "id": 1773895566338,
+        "name": "Jigar",
+        "email": "Chiku986@gmail.com",
+        "password": "Chiku@.4564",
+        "role": "user",
+        "createdAt": "2026-03-19T04:46:06.338Z"
+    },
+    {
+        "id": 1774074108099,
+        "name": "Nayan Dhar",
+        "email": "Tolu6@gmail.com",
+        "password": "Tolu@.45",
+        "role": "user",
+        "createdAt": "2026-03-21T06:21:48.099Z"
+    },
+    {
+        "id": 1774074486901,
+        "name": "Devi",
+        "last_name": "Dhar",
+        "email": "devi6@gmail.com",
+        "password": "devi@.45",
+        "role": "user",
+        "createdAt": "2026-03-21T06:28:06.901Z"
+    },
+    {
+        "id": 1774076850670,
+        "name": "Jeet",
+        "last_name": "Dhar",
+        "email": "Jeet425@gmail.com",
+        "password": "Jeet62@.45",
+        "role": "user",
+        "createdAt": "2026-03-21T07:07:30.670Z"
+    }
+]
