@@ -71,18 +71,11 @@ app.post("/api/register",async (req,res)=>{
         role:"user",
         createdAt:new Date()
     }
-    // users.push(newuser)
-    // fs.writeFile("user.json",JSON.stringify(users),(err,data)=>{
-    //     res.status(201).send("User created successfully")
-    // })
     const ress=await User.create(newuser)
     res.status(201).send("User created successfully")
     console.log(newuser)
 })
 app.get("/login/:id",async (req,res)=>{
-    // const id=Number(req.params.id)
-    // const users=JSON.parse(fs.readFileSync("user.json","utf-8"))
-    // const user=users.find((user)=>user.id===id)
     const user=await User.findById(req.params.id)
     if(!user){
         res.status(404).send("User not found")
@@ -90,7 +83,8 @@ app.get("/login/:id",async (req,res)=>{
     res.status(302).json(user)
 })
 app.patch("/update/:id",async (req,res)=>{
-    await User.findByIdAndUpdate(req.params.id,{last_name: "Changed"})
+    const {name,last_name,hashedPassword}=req.body
+    await User.findByIdAndUpdate(req.params.id,{name:name,last_name:last_name,hashedPassword:hashedPassword})
     res.status(202).send("Update successfully")
 })
 app.delete("/delete/:id",async (req,res)=>{
