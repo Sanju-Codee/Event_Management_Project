@@ -3,7 +3,7 @@ import { StatusCodes } from "http-status-pro-js"
 function loginmiddle(req, res, next) {
     try {
         const schema = Joi.object({
-             _id: Joi.string().length(24).hex().required()
+             email: Joi.string().required()
 
         }).unknown(true);
         let { value, error } = schema.validate(req.body)
