@@ -4,7 +4,7 @@ import { StatusCodes } from "http-status-pro-js"
 function deletemiddle(req, res, next) {
     try {
         const schema = Joi.object({
-            id: Joi.string().alphanum().min(3).max(50).required()
+            id: Joi.string().min(1).max(100).required()
         })
         const { value, error } = schema.validate({ id: req.params.id })
         if (error) {
