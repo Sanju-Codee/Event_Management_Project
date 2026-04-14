@@ -3,6 +3,7 @@ dotenv.config();
 
 import express from "express"
 import mongoose from "mongoose"
+import cors from "cors"
 import User from "./models_/user.model.js"
 
 //Calling routes
@@ -27,6 +28,12 @@ console.log(process.env.MONGO_URI);
 mongoose.connect(process.env.MONGO_URI).then(()=> console.log("MongoDB connected")).catch(err=> console.log("Error",err))
 
 app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+app.use(cors({
+    origin: "https://imsrthk19.github.io",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}))
 
 //Routes
 app.get("/",(req,res)=>{
