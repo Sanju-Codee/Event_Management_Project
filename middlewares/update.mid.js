@@ -5,7 +5,7 @@ function update_middleware(req,res,next){
         const schema=Joi.object({
             first_name: Joi.string().alphanum().min(3).max(30),
             last_name: Joi.string().alphanum().min(3).max(30),
-            hashedpassword: Joi.string().min(6)
+            password: Joi.string().min(6)
         }).unknown(true)
         let {value,error}=schema.validate(req.body)
         if(error){

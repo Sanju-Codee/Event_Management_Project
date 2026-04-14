@@ -29,11 +29,7 @@ mongoose.connect(process.env.MONGO_URI).then(()=> console.log("MongoDB connected
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
-app.use(cors({
-    origin: "https://imsrthk19.github.io",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}))
+app.use(cors())
 
 //Routes
 app.get("/",(req,res)=>{
