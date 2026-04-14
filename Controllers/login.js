@@ -4,11 +4,11 @@ import { StatusCodes } from "http-status-pro-js"
 import jwt from "jsonwebtoken"
 async function login(req, res) {
     try {
-        const {_id,password } = req.body
-        if(!_id ||!password){
+        const {email,password } = req.body
+        if(!email ||!password){
             return res.status(400).send("All field are required")
         }
-        const user = await User.findById(_id)
+        const user = await User.findById(email)
         if (!user) {
             return res.status(404).send("User not found")
         }
