@@ -5,14 +5,14 @@ function usermiddle(req, res, next) {
         const schema = Joi.object({
             first_name: Joi.string().alphanum().min(3).max(30).required(),
             last_name: Joi.string().alphanum().min(3).max(30).required(),
-            email: Joi.string().email().required()
-            // password:
+            email: Joi.string().email().max(30).required(),
+            password: Joi.string().min(5).max(15).required()
         }).unknown(true);
         let { value, error } = schema.validate(req.body)
         if (error) {
             res.status(StatusCodes.BAD_REQUEST.code).json({
                 code: StatusCodes.BAD_REQUEST.code,
-                message: StatusCodes.BAD_REQUEST.message,
+                message: "Invalid email or password",
                 data: null
 
             })        
