@@ -7,6 +7,18 @@ async function adding_event(req, res) {
             return res.status(400).json({ message: "All event fields are required" })
         }
 
+        const check = await Event.findOne({
+            Event_name: Event_name,
+            Category: Category,
+            Location: Location,
+            Event_Date: new Date(Event_Date),
+            Starting_Time:Starting_Time,
+            Ending_Time:Ending_Time,
+            Price:Number(Price)
+        })
+        if (check) {
+            return res.status(409).send("Event already exits in this timeline and at this location")
+        }
         const event = await Event.create({
             Event_name,
             Category,
