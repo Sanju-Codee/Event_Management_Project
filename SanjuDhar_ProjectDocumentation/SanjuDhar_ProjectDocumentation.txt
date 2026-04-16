@@ -9,7 +9,7 @@ This project is a full-stack Event Management and Ticket Booking System that all
 The system is divided into:
 •	Backend (Node.js, Express, MongoDB)
 •	Frontend (HTML,CSS,JS)
-________________________________________
+
 2. Backend Architecture
 Folder Structure
 Controllers/
@@ -43,7 +43,7 @@ Handles API routes:
 •	user.routers.js → User-related routes
 •	update_user.router.js → Update operations
 •	delete.router.js → Delete operations
-________________________________________
+
 3. API Endpoints
 Auth APIs
 •	POST /register → Register user
@@ -54,7 +54,7 @@ Event APIs
 •	GET /events?category=&sort= → Filter/sort events
 •	PUT /events/:id → Update event
 •	DELETE /events/:id → Delete event
-________________________________________
+
 4. Frontend Overview
 The frontend interacts with backend APIs and provides a user-friendly interface. Below is the detailed flow of what happens when a user clicks different options:
 4.1 User Authentication Flow
@@ -72,7 +72,7 @@ Login Page
 o	Sends POST /login request
 o	If credentials are correct → Redirect to Event Dashboard
 o	If incorrect → Shows Error
-________________________________________
+
 4.2 Event Listing Page (Dashboard)
 •	When user lands on dashboard:
 o	GET /events API is called
@@ -87,7 +87,7 @@ Sort Option
 •	On change:
 o	GET /events?sort=value
 o	Events are sorted accordingly
-________________________________________
+
 4.3 Add Event (Admin/User Action)
 •	User can fills event form:
 o	Event Name, Category, Location, Event_Date, Starting_Timed En-ing_Time, Price
@@ -95,27 +95,27 @@ o	Event Name, Category, Location, Event_Date, Starting_Timed En-ing_Time, Price
 o	Sends POST /events
 o	On success → Event added and dashboard refreshes
 o	On error → Error message shown
-________________________________________
+
 4.4 Delete Event
 •	User clicks Delete Button on an event
 •	Confirmation prompt appears
 •	On confirm:
 o	Sends DELETE /events/:id
 o	Event is removed from UI
-________________________________________
+
 4.5 Ticket Booking Flow (If Implemented in UI)
 •	User clicks Book Ticket on an event
 •	Event details page opens
 •	User selects quantity or checkout booking
 •	On clicking Checkout:
 o	Nothing will occur because any Bank account not connected.(This thing we will do in future).
-________________________________________
+
 Technologies Used:
 •	HTML
 •	CSS / Tailwind
 •	JavaScript
 •	Axios (for API communication)
-________________________________________
+
 5. Database Design
 User Collection
 Fields:
@@ -132,14 +132,14 @@ Fields:
 •	Starting_Time
 •	Ending_Time
 •	Price
-________________________________________
+
 6. Features Implemented
 •	User authentication (login/register)
 •	Event CRUD operations
 •	Filtering and sorting events
 •	Middleware-based validation
 •	MVC architecture
-________________________________________
+
 7. How to Run the Project
 Backend
 1.	Install dependencies:
@@ -154,13 +154,13 @@ Frontend
 npm install
 2.	Run:
 npm start
-________________________________________
+
 8. Future Improvements
 •	Payment integration
 •	Ticket PDF generation
 •	Admin dashboard
 •	Event image uploads
 •	JWT authentication & authorization
-________________________________________
+
 9. Conclusion
 This project demonstrates a complete Full stack web service using Node.js and MongoDB and also in Frontend (HTML, CSS, JS) with a modular and scalable architecture. It supports real-world features like authentication, filtering, and CRUD operations, making it a strong foundation for production-level Event Management and Ticket Booking system.
