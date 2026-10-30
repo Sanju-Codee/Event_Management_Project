@@ -105,15 +105,6 @@ Start the backend server:
 
 Bash
 npm start
-3. Frontend Setup
-Navigate to the frontend directory:
-
-Bash
-npm install
-Run the frontend application:
-
-Bash
-npm start
 
 🔮 Future Improvements
 Payment Integration: Integrate gateway services (like Stripe/Razorpay) for real-time ticket checkout.
