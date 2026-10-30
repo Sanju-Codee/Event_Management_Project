@@ -114,6 +114,7 @@ Run the frontend application:
 
 Bash
 npm start
+
 🔮 Future Improvements
 Payment Integration: Integrate gateway services (like Stripe/Razorpay) for real-time ticket checkout.
 
